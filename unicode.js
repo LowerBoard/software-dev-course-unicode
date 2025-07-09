@@ -15,7 +15,14 @@ let inputString = "Hi";
 
 Expected Output:
 sumCodePoints: 177 // 'H' = 72, 'i' = 105, 72 + 105 = 177
+*/
+ 
+let stringP1 = "Yo";
+let sumCodePoints = stringP1.charCodeAt(0) + stringP1.charCodeAt(1);
+console.log(sumCodePoints);
 
+
+/*
 Exercise 2: Generate a String from Two Code Points
 Objective: Take two numeric Unicode code points,
 convert them to characters using String.fromCharCode,
@@ -31,6 +38,12 @@ let codePoint2 = 66;
 
 Expected Output:
 combinedString: "AB" // 65 = 'A', 66 = 'B', combined = "AB"
+*/
+
+let combinedString = String.fromCharCode(67) + String.fromCharCode(76);
+console.log(combinedString);
+
+/*
 
 Exercise 3: Find the Character Difference
 Objective: Extract the Unicode code points of two given characters from a string
@@ -48,7 +61,12 @@ let index2 = 2;
 Expected Output:
 codePointDifference: 16 // 'C' = 67, 't' = 116, |67 - 116| = 16
 
+*/
+let stringP3 = "Liverpool FC";
+let codePointDifference = Math.abs(stringP3.charCodeAt(6) - stringP3.charCodeAt(1));
+console.log(codePointDifference);
 
+/*
 
 Practice Problem #2
 
@@ -86,15 +104,17 @@ Assign the result to a variable named swappedString.
 //Starter Code
 // Task 1
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0); // Your code here
+let thirdCodePoint = inputString1.charCodeAt(2); // Your code here
 
 // Task 2
-let wordFromCodePoints; // Your code here
+let wordFromCodePoints = String.fromCharCode(72) + String.fromCharCode(101) + String.fromCharCode(108) + String.fromCharCode(108); // Your code here
 
 // Task 3
 let inputString2 = "Launch";
-let swappedString; // Your code here
+let firstChar = inputString2.charCodeAt(0);
+let lastChar = inputString2.charCodeAt(inputString2.length - 1);
+let swappedString =  String.fromCharCode(lastChar) + inputString2.slice(1,-1) + String.fromCharCode(firstChar);  // Your code here
 
 // Log all results
 console.log({
